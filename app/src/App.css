@@ -129,7 +129,7 @@
 }
 
 #cliff {
-  background: url("../assets/cliff.png"), linear-gradient(to bottom, #DDB47D 41%, #C5E1E6 96%) ;
+  background: url("assets/images/cliffside.png"), linear-gradient(to bottom, #DDB47D 41%, #C5E1E6 96%) ;
   background-size: cover;
   background-position: top center;
   background-blend-mode: normal;
@@ -146,51 +146,91 @@
   pointer-events: none; /* Ensure it's non-interactive */
 }
 
+#cloud1 {
+  background: url("assets/images/cloud_transition_1.png");
+  background-size: 70%; /* Scale the clouds down */
+  background-repeat: no-repeat;
+  background-position: 60% 0%; /* Centered horizontally, 10% from the top */
+}
+
+#cloud2 {
+  background: url("assets/images/cloud_transition_2.png");
+  background-size: 90%; /* Scale the clouds down */
+  background-repeat: no-repeat;
+  background-position: -60% 40%; /* Centered horizontally, 10% from the top */
+}
+
+#cloud3 {
+  background: url("assets/images/cloud_transition_3.png");
+  background-size: 60%; /* Scale the clouds down */
+  background-repeat: no-repeat;
+  background-position: 120% 40%; /* Centered horizontally, 10% from the top */
+}
+
+#cloud4 {
+  background: url("assets/images/cloud_transition_4.png");
+  background-size: 50%; /* Scale the clouds down */
+  background-repeat: no-repeat;
+  background-position: 85% 63%; /* Centered horizontally, 10% from the top */
+}
+
+#cloud5 {
+  background: url("assets/images/cloud_transition_5.png");
+  background-size: 20%; /* Scale the clouds down */
+  background-repeat: no-repeat;
+  background-position: 100% 37%; /* Centered horizontally, 10% from the top */
+}
+
+
 #clouds {
-  background: url("../assets/clouds.png");
+  background: url("assets/clouds.png");
   background-size: 100%; /* Scale the clouds down */
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 #mini-cloud-left {
-  background-image: url("../assets/mini-cloud-left.png");
+  background-image: url("assets/mini-cloud-left.png");
   background-size: 30%; /* Scale the clouds down */
   background-repeat: no-repeat;
   background-position: top left;
 }
 
 #mini-cloud-right {
-  background-image: url("../assets/mini-cloud-right.png");
+  background-image: url("assets/mini-cloud-right.png");
   background-size: 20%; /* Scale the clouds down */
   background-repeat: no-repeat;
   background-position: top right;
 }
 
 #sun {
-  background-image: url("../assets/sun.png");
+  background-image: url("assets/sun.png");
   background-size: 20%; /* Scale the clouds down */
   background-repeat: no-repeat;
   background-position: top left;
 }
 
 #stat1 {
-  background-image: url("../assets/stat.png");
+  background-image: url("assets/stat.png");
   background-size: 20%; /* Scale the image */
   background-repeat: no-repeat;
   background-position: 40% 60%; /* 10% from the left and 10% from the top */
 }
 
 #stat2 {
-  background-image: url("../assets/stat.png");
+  background-image: url("assets/stat.png");
   background-size: 20%; /* Scale the image */
   background-repeat: no-repeat;
   background-position: 90% 40%; /* Centered horizontally, 10% from the top */
 }
 
 #stat3 {
-  background-image: url("../assets/stat.png");
+  background-image: url("assets/stat.png");
   background-size: 20%; /* Scale the image */
   background-repeat: no-repeat;
   background-position: 70% 30%; /* 90% from the left and 10% from the top */
 }
+
+
+
+/* For the header section*/
