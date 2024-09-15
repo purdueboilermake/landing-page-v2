@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
@@ -7,15 +7,30 @@ import HeroText from './components/HeroText';
 import AboutSection from './components/AboutSection';
 
 function App() {
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  // Effect to update isMobile on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Add resize event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <div className='App'>
-      <Parallax pages={6} style={{ top: '0', left: '0' }} className="animation">
+      <Parallax pages={6} style={{ top: '0', left: '0' }} className="animation" key={isMobile ? 'mobile' : 'desktop'}>
         <ParallaxLayer offset={0.5} speed={0}>
-        <div className="animation_layer parallax" id="about">
-          
-        </div>
+          <div className="animation_layer parallax" id="about">
+
+          </div>
         </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0}>
           <div className="animation_layer parallax" id="about">
