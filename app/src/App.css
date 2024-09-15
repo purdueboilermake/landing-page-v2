@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -48,7 +44,12 @@
   height: 100vh;
 }
 
-#info {
+#faq {
+  background-color: #7AA689;
+  height: 100vh;
+}
+
+#sponsors {
   background-color: #7AA689;
   height: 100vh;
 }
@@ -107,8 +108,18 @@
   font-weight: 600;
 }
 
+.App {
+  text-align: center;
+}
+
 .animation, .animation_layer {
 	height: 1000px;
+}
+
+@media (max-width: 768px) {
+  .animation, .animation_layer {
+    height: 500px;
+  }
 }
 
 .animation {
@@ -129,11 +140,12 @@
 }
 
 #cliff {
+  position: absolute;
   background: url("assets/images/cliffside.png"), linear-gradient(to bottom, #DDB47D 41%, #C5E1E6 96%) ;
   background-size: cover;
-  background-position: top center;
   background-blend-mode: normal;
 }
+
 
 #cliff::after {
   content: '';
@@ -147,31 +159,37 @@
 }
 
 #cloud1 {
-  background: url("assets/images/cloud_transition_1.png");
-  background-size: 70%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: 60% 0%; /* Centered horizontally, 10% from the top */
+  position: absolute;
+  width: 60vw; /* Adjust the width as needed */
+  background: url("assets/images/cloud_transition_1.png") no-repeat center center;
+  background-size: contain; /* Ensures the image covers the element */
+  left: 15%; /* Position horizontally relative to the viewport width */
+  top: 10%; /* Position vertically relative to the viewport height */
 }
 
 #cloud2 {
-  background: url("assets/images/cloud_transition_2.png");
-  background-size: 90%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: -60% 40%; /* Centered horizontally, 10% from the top */
+  position: absolute;
+  width: 90vw;
+  background: url("assets/images/cloud_transition_2.png") no-repeat center center;
+  background-size: contain;
+  left: -15%;
 }
 
 #cloud3 {
-  background: url("assets/images/cloud_transition_3.png");
-  background-size: 60%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: 120% 40%; /* Centered horizontally, 10% from the top */
+  position: absolute;
+  width: 70vw;
+  background: url("assets/images/cloud_transition_3.png") no-repeat center center;
+  background-size: contain;
+  left: 40%;
 }
-
+/* Cloud 4 */
 #cloud4 {
-  background: url("assets/images/cloud_transition_4.png");
-  background-size: 50%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: 85% 63%; /* Centered horizontally, 10% from the top */
+  position: absolute;
+  width: 40vw;
+  background: url("assets/images/cloud_transition_4.png") no-repeat center center;
+  background-size: contain;
+  left: 50%;
+  top: 10%;
 }
 
 #cloud5 {
@@ -179,6 +197,27 @@
   background-size: 20%; /* Scale the clouds down */
   background-repeat: no-repeat;
   background-position: 100% 37%; /* Centered horizontally, 10% from the top */
+}
+
+#cloud5 {
+  position: absolute;
+  width: 25vw;
+  background: url("assets/images/cloud_transition_5.png") no-repeat center center;
+  background-size: contain;
+  left: 75%;
+  top: -12%;
+}
+
+@media (max-width: 768px) {
+  #cloud1 {
+    top: 3%;
+  }
+  #cloud4 {
+    top: 4%;
+  }
+  #cloud5 {
+    top: -5%;
+  }
 }
 
 

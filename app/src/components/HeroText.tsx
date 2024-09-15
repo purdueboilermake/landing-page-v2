@@ -7,9 +7,13 @@
 import React from 'react';
 import ApplyButton from './ApplyButton';
 
-export default function HeroText() {
+type HeroTextProps = {
+    isMobile: boolean;
+}
+
+export default function HeroText({ isMobile }: HeroTextProps) {
     return (
-        <div className="container mx-auto text-white text-right">
+        <div className={`container mx-auto text-white ${isMobile ? "text-center" : "text-right"}`}>
             {/* BOILERMAKE in subtitle font */}
             <h1 className="text-5xl md:text-8xl font-subtitle">BOILERMAKE</h1>
 
@@ -21,7 +25,7 @@ export default function HeroText() {
 
             {/* Apply Button with a little space above */}
             <div className="mt-2">
-                <ApplyButton size="large" />
+                <ApplyButton size={isMobile ? "medium" : "large"} />
             </div>
         </div>
     );
