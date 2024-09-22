@@ -22,7 +22,7 @@ export default function FAQSign() {
                 alt="FAQ Sign"
                 className="absolute inset-0 w-full h-80 object-contain"
             />
-            <h1 className="relative z-10 text-4xl font-bold text-white pt-24">FAQ</h1>
+            <h1 className="relative z-10 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-white mt-40 md:mt-20 lg:mt-16">FAQ</h1>
         </div>
     )
 }

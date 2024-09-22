@@ -4,10 +4,22 @@
   position: relative; /* Needed to position text inside */
 }
 
+@media (max-width: 768px) {
+  #about-background {
+    height: 100vh;
+  }
+}
+
 
 #schedule {
   background: linear-gradient(to top, #7AA689 0%, #C0E2F9 100%);
   height: 200vh;
+}
+
+@media (max-width: 768px) {
+  #schedule {
+    height: 100vh;
+  }
 }
 
 
@@ -16,9 +28,21 @@
   height: 100vh;
 }
 
+@media (max-width: 768px) {
+  #faq {
+    height: 75vh;
+  }
+}
+
 #sponsors {
   background-color: #7AA689;
   height: 150vh;
+}
+
+@media (max-width: 768px) {
+  #sponsors {
+    height: 75vh;
+  }
 }
 
 #footer {
@@ -160,13 +184,6 @@
 }
 
 #cloud5 {
-  background: url("assets/images/cloud_transition_5.png");
-  background-size: 20%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: 100% 37%; /* Centered horizontally, 10% from the top */
-}
-
-#cloud5 {
   position: absolute;
   width: 25vw;
   background: url("assets/images/cloud_transition_5.png") no-repeat center center;
@@ -204,16 +221,16 @@
 /* Mobile Adjustments for Smaller Screens */
 @media (max-width: 768px) {
   #road {
-    top: -33%; /* Move the road up less on mobile */
-    left: 5%; /* Adjust the road to fit better horizontally */
+    top: -65%; /* Move the road up less on mobile */
+    left: 15%; /* Adjust the road to fit better horizontally */
     width: 150vw; /* Decrease the width for mobile screens */
     height: 150vh; /* Decrease the height for mobile screens */
-    transform: rotate(10deg) scale(1); /* Scale back to normal size for mobile */
+    transform: rotate(20deg) scale(1); /* Scale back to normal size for mobile */
   }
 }
 
 #footer-background {
-  background: url("assets/images/footer_background.png") repeat-x, linear-gradient(to bottom, #7AA689 0%, #C0E2F9 100%);
+  background: url("assets/images/footer_background.png") repeat-x;
   height: 100vh;
   background-size: contain; /* Ensures the image maintains aspect ratio */
   position: relative; /* Allows for absolute positioning of inner content */
@@ -230,28 +247,34 @@
 }
 
 
-
-
 #mini-cloud-left {
-  background-image: url("assets/images/cloud_transition_5.png");
-  background-size: 30%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: top left;
+  position: absolute;
+  width: 40vw;
+  background: url("assets/images/cloud_transition_5.png") no-repeat center center;
+  background-size: contain;
+  left: 5%;
+  top: -37%
 }
 
 #mini-cloud-right {
-  background-image: url("assets/images/cloud_transition_4.png");
-  background-size: 20%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: top right;
+  position: absolute;
+  width: 40vw;
+  background: url("assets/images/cloud_transition_4.png") no-repeat center center;
+  opacity: 0.5;
+  background-size: contain;
+  left: 69%;
+  top: -20%
 }
 
 #sun {
-  background-image: url("assets/images/sun.png");
-  background-size: 20%; /* Scale the clouds down */
-  background-repeat: no-repeat;
-  background-position: top left;
+  position: absolute;
+  width: 45vw;
+  background: url("assets/images/sun.png") no-repeat center center;
+  background-size: contain;
+  left: -10%;
+  top: -45%
 }
+
 
 #stat1, #stat2, #stat3 {
   position: absolute;
@@ -261,23 +284,73 @@
 
 /* Adjust stat1 position */
 #stat1 {
-  top: 60%;
+  top: 57%;
   left: 60%;
+  transform: rotate(-6deg);
 }
 
 /* Adjust stat2 position */
 #stat2 {
-  top: 40%;
-  left: 52%;
-  transform: translateX(-50%); /* Center it horizontally */
+  top: 37%;
+  left: 45%;
+  transform: translateX(-50%) rotate(-3deg); /* Center it horizontally */
 }
 
 /* Adjust stat3 position */
 #stat3 {
   top: 30%;
-  left: 80%;
-  transform: translateX(-50%); /* Center it horizontally */
+  left: 77%;
+  transform: translateX(-50%) rotate(5deg); /* Center it horizontally */
 }
 
+@media (max-width: 768px) {
+  #stat1 {
+    left: 57%;
+  }
+}
+
+#event1, #event2, #event3, #event4, #event5 {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+/* Adjust event1 position */
+#event1 {
+  left: 80%;
+}
+
+#event2 {
+  left: 5%;
+}
+
+#event3 {
+  left: 25%;
+}
+#event4 {
+  left: 15%;
+}
+#event5 {
+  left: 75%;
+}
+
+@media (max-width: 768px) {
+  #event1 {
+    left: 80%;
+  }
+  
+  #event2 {
+    left: 3%;
+  }
+  
+  #event3 {
+    left: 25%;
+  }
+  #event4 {
+    left: 15%;
+  }
+  #event5 {
+    left: 77%;
+  }
+}
 
 /* For the header section*/

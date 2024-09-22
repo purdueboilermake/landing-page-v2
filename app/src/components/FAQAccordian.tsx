@@ -9,9 +9,10 @@ import pin from '../assets/images/pin.png';
 
 type FAQAccordianProps = {
   questions: { question: string, answer: string }[];
+  isMobile: boolean;
 };
 
-export default function FAQAccordian({ questions }: FAQAccordianProps) {
+export default function FAQAccordian({ questions, isMobile }: FAQAccordianProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -25,7 +26,7 @@ export default function FAQAccordian({ questions }: FAQAccordianProps) {
           <h2>
             <button
               type="button"
-              className={`flex text-xl items-center justify-between p-5 font-medium font-subtitle border border-b-0 bg-[#E1E5E7] ${index === 0 ? "rounded-t-xl" : index === questions.length - 1 && openIndex !== index ? "rounded-b-xl" : "" } focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 w-full`}
+              className={`flex text-xs md:text-md lg:text-xl items-center justify-between p-2 md:p-3 lg:p-5 font-medium font-subtitle border border-b-0 bg-[#E1E5E7] ${index === 0 ? "rounded-t-xl" : index === questions.length - 1 && openIndex !== index ? "rounded-b-xl" : "" } focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 w-full`}
               onClick={() => toggleAccordion(index)}
               aria-expanded={openIndex === index}
               aria-controls={`accordion-collapse-body-${index}`}
@@ -34,13 +35,13 @@ export default function FAQAccordian({ questions }: FAQAccordianProps) {
               <img
                 src={pin}
                 alt="Pin Icon"
-                className={`w-8 transition-transform duration-200 ${openIndex === index ? 'rotate-90' : ''}`}
+                className={`w-4 md:w-6 lg:w-8 transition-transform duration-200 ${openIndex === index ? 'rotate-90' : ''}`}
               />
             </button>
           </h2>
           <div
             id={`accordion-collapse-body-${index}`}
-            className={`${openIndex === index ? 'block' : 'hidden'} p-5 border border-white dark:border-gray-700 bg-[#E1E5E7] rounded-b-xl w-full`}
+            className={`${openIndex === index ? 'block' : 'hidden'} p-2 md:p-3 lg:p-5 border border-white dark:border-gray-700 bg-[#E1E5E7] rounded-b-xl w-full text-xs md:text-md lg:text-xl text-left`}
             aria-labelledby={`accordion-collapse-heading-${index}`}
           >
             <p className="mb-2 dark:text-gray-400">{faq.answer}</p>

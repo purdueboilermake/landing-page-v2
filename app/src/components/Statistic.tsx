@@ -15,21 +15,21 @@ type StatisticProps = {
 
 export default function Statistic({ statistic, variable }: StatisticProps) {
   return (
-    <div className="container flex flex-row items-center">
+    <div className="container flex flex-row items-center gap-3">
       {/* Relative container for positioning the text over the image */}
-      <div className="relative w-36 h-36">
+      <div className="relative w-20 md:w-30 lg:w-40 h-20 md:h-30 lg:h-40">
         <img
           src={image}
           alt={"Statistic: " + statistic + " " + variable}
           className="w-full h-full object-contain"
         />
         {/* Absolutely positioned text centered over the image */}
-        <p className="absolute inset-0 flex items-center justify-center text-4xl text-white font-bold pt-2">
+        <p className="absolute inset-0 flex items-center justify-center text-2xl md:text-3xl lg:text-5xl text-white font-extrabold pt-2">
           {statistic}
         </p>
       </div>
       {/* Statistic description text on the right */}
-      <p className="text-4xl">{variable}</p>
+      <p className="text-xl md:text-2xl lg:text-5xl">{variable}</p>
     </div>
   );
 }

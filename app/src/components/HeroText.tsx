@@ -13,7 +13,7 @@ type HeroTextProps = {
 
 export default function HeroText({ isMobile }: HeroTextProps) {
     return (
-        <div className={`container mx-auto text-white ${isMobile ? "text-center" : "text-right"}`}>
+        <div className={`container mx-auto text-white`}>
             {/* BOILERMAKE in subtitle font */}
             <h1 className="text-5xl md:text-8xl font-subtitle font-bold">BOILERMAKE</h1>
 
@@ -22,11 +22,6 @@ export default function HeroText({ isMobile }: HeroTextProps) {
 
             {/* Date in paragraph font */}
             <p className="text-xl md:text-3xl font-body font-extrabold leading-none mb-4">1/19 - 1/23</p>
-
-            {/* Apply Button with a little space above */}
-            <div className="mt-2">
-                <ApplyButton size={isMobile ? "medium" : "large"} />
-            </div>
         </div>
     );
 }
