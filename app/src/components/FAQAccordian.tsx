@@ -4,23 +4,49 @@
  * @AshokSaravanan222
  * 09-15-2024
  */
+import React, { useState } from 'react';
+import pin from '../assets/images/pin.png';
 
 type FAQAccordianProps = {
-    questions: {question: string, answer: string}[];
-}
+  questions: { question: string, answer: string }[];
+};
 
 export default function FAQAccordian({ questions }: FAQAccordianProps) {
-    return (
-        <div>
-            {questions.map((faq, index) => (
-                <div key={index} className="border-b border-gray-200">
-                    <div className="flex items-center justify-between py-4">
-                        <h3 className="text-lg font-bold">{faq.question}</h3>
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                    </div>
-                    <p className="text-gray-500">{faq.answer}</p>
-                </div>
-            ))}
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <div id="accordion-collapse" className="space-y-1">
+      {questions.map((faq, index) => (
+        <div key={index} className="max-w-full">
+          <h2>
+            <button
+              type="button"
+              className={`flex text-xl items-center justify-between p-5 font-medium font-subtitle border border-b-0 bg-[#E1E5E7] ${index === 0 ? "rounded-t-xl" : index === questions.length - 1 && openIndex !== index ? "rounded-b-xl" : "" } focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 w-full`}
+              onClick={() => toggleAccordion(index)}
+              aria-expanded={openIndex === index}
+              aria-controls={`accordion-collapse-body-${index}`}
+            >
+              <span>{faq.question}</span>
+              <img
+                src={pin}
+                alt="Pin Icon"
+                className={`w-8 transition-transform duration-200 ${openIndex === index ? 'rotate-90' : ''}`}
+              />
+            </button>
+          </h2>
+          <div
+            id={`accordion-collapse-body-${index}`}
+            className={`${openIndex === index ? 'block' : 'hidden'} p-5 border border-white dark:border-gray-700 bg-[#E1E5E7] rounded-b-xl w-full`}
+            aria-labelledby={`accordion-collapse-heading-${index}`}
+          >
+            <p className="mb-2 dark:text-gray-400">{faq.answer}</p>
+          </div>
         </div>
-    )
+      ))}
+    </div>
+  );
 }

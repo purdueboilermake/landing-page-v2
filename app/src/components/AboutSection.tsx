@@ -7,9 +7,9 @@
 
 export default function AboutSection() {
     return (
-        <div className="container mx-auto">
+        <div className="container mx-auto text-left">
             <h1 className="text-4xl font-bold">About</h1>
-            <p className="text-lg">BoilerMake is a hackathon hosted by Purdue University. It is a 36-hour event where students from all over the country come together to create innovative projects. This year, BoilerMake XII will be held from January 19th to January 23rd. Don't miss out on this amazing opportunity to learn, build, and network with other students!</p>
+            <p className="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
     )
 }

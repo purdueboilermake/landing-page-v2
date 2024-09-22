@@ -5,10 +5,17 @@
  * 09-15-2024
  */
 
+import yellowSign from '../../assets/images/sign_3.png'
+
 export default function SponsorSign() {
     return (
-        <div className="w-full h-64 bg-cover bg-center flex items-center justify-center">
-            <h1 className="text-4xl font-bold text-white">Sponsors</h1>
+        <div className="relative w-full h-full flex items-center justify-center">
+            <img
+                src={yellowSign}
+                alt="Sponsors Sign"
+                className="absolute inset-0 w-full h-full object-contain"
+            />
+            <h1 className="relative z-10 text-4xl font-bold text-white pb-8">Sponsors</h1>
         </div>
     )
 }

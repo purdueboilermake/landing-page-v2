@@ -19,7 +19,7 @@ export default function SponsorCard({ sponsor }: SponsorCardProps) {
     return (
         <a href={sponsor.url} target="_blank" rel="noreferrer">
             <div className="w-32 h-32 bg-black rounded-full flex items-center justify-center">
-                <img src={sponsor.logo} alt={sponsor.name} className="h-24" />
+                <img src={sponsor.logo} alt={sponsor.name} className="h-20" />
             </div>
         </a>
     )

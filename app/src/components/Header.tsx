@@ -65,7 +65,7 @@ export default function Header({ isMobile }: HeaderProps) {
                                 <li>
                                     <a
                                         href="#about"
-                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl"
+                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
                                     >
                                         About
                                     </a>
@@ -73,7 +73,7 @@ export default function Header({ isMobile }: HeaderProps) {
                                 <li>
                                     <a
                                         href="#schedule"
-                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl"
+                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
                                     >
                                         Schedule
                                     </a>
@@ -81,7 +81,7 @@ export default function Header({ isMobile }: HeaderProps) {
                                 <li>
                                     <a
                                         href="#faq"
-                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl"
+                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
                                     >
                                         FAQ
                                     </a>
@@ -89,7 +89,7 @@ export default function Header({ isMobile }: HeaderProps) {
                                 <li>
                                     <a
                                         href="#sponsors"
-                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl"
+                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
                                     >
                                         Sponsors
                                     </a>

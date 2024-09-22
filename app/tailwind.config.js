@@ -6,12 +6,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        title: ['Arvo', 'serif'], // For titles
-        subtitle: ['Delicious Handrawn', 'cursive'], // For subtitles
+        title: ['Arvo', 'system-ui'], // For titles
+        subtitle: ['Averia Libre', 'system-ui'], // For subtitles
         body: ['Dosis', 'sans-serif'], // For paragraphs
       },
     },
   },
   plugins: [],
 }
-

@@ -22,7 +22,7 @@ export default function ApplyButton({ size }: ApplyButtonProps) {
     return (
         <a href='https://boilermake.org/' target='_blank' rel='noreferrer'>
             <button
-                className={`bg-white shadow-md text-[#DDB47D] font-bold hover:shadow-lg transition-shadow duration-300 ${sizeClasses[size]}`}
+                className={`bg-white shadow-md text-[#DDB47D] font-body font-extrabold hover:shadow-lg transition-shadow duration-300 ${sizeClasses[size]}`}
             >
                 Apply Now!
             </button>

@@ -15,13 +15,13 @@ export default function HeroText({ isMobile }: HeroTextProps) {
     return (
         <div className={`container mx-auto text-white ${isMobile ? "text-center" : "text-right"}`}>
             {/* BOILERMAKE in subtitle font */}
-            <h1 className="text-5xl md:text-8xl font-subtitle">BOILERMAKE</h1>
+            <h1 className="text-5xl md:text-8xl font-subtitle font-bold">BOILERMAKE</h1>
 
             {/* XII in title font */}
-            <h2 className="text-[100px] md:text-[200px] font-title leading-none">XII</h2>
+            <h2 className="text-[100px] md:text-[200px] font-title leading-none font-extrabold">XII</h2>
 
             {/* Date in paragraph font */}
-            <p className="text-xl md:text-3xl font-body leading-none mb-4">1/19 - 1/23</p>
+            <p className="text-xl md:text-3xl font-body font-extrabold leading-none mb-4">1/19 - 1/23</p>
 
             {/* Apply Button with a little space above */}
             <div className="mt-2">
