@@ -24,13 +24,13 @@ export default function Header({ isMobile }: HeaderProps) {
 
     return (
         <header className="w-full p-4 fixed top-0 z-50">
-            <div className="container mx-auto flex justify-between items-center text-white">
+            <div className="flex justify-between items-center text-white">
                 {/* Logo */}
                 <a href="/">
                     {isMobile ? (
-                        <img src={logo} alt="Boilermake Logo" className="w-12 h-12" />
+                        <img src={logo} alt="Boilermake Logo" className="w-12 h-12 object-contain min-w-12 min-h-12" />
                     ) : (
-                        <img src={logo} alt="Boilermake Logo" className="w-16 h-16" />
+                        <img src={logo} alt="Boilermake Logo" className="w-16 h-16 object-contain min-w-12 min-h-12" />
                     )}
                 </a>
 
@@ -68,6 +68,14 @@ export default function Header({ isMobile }: HeaderProps) {
                                         className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
                                     >
                                         About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="#teams"
+                                        className="hover:text-blue-600 transition-all duration-300 font-subtitle text-xl font-bold"
+                                    >
+                                        Teams
                                     </a>
                                 </li>
                                 <li>
@@ -115,6 +123,14 @@ export default function Header({ isMobile }: HeaderProps) {
                                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                                 >
                                     About
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#teams"
+                                    className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                >
+                                    Teams
                                 </a>
                             </li>
                             <li>
