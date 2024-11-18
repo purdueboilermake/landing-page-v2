@@ -18,19 +18,19 @@
 
 @media (max-width: 768px) {
   #schedule {
-    height: 100vh;
+    height: 101vh;
   }
 }
 
 
 #faq {
   background-color: #7AA689;
-  height: 100vh;
+  height: 101h;
 }
 
 @media (max-width: 768px) {
   #faq {
-    height: 75vh;
+    height: 76vh;
   }
 }
 
