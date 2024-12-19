@@ -84,7 +84,7 @@ export default function EventPreview({ isMobile, title, date, location, descript
             {(isPopupVisible || isClicked) && (
                 <div
                     className={`absolute ${popupType === 1 ? 'right-[0%]' : cardType === 2 ? 'left-[130%]' : 'left-[90%]'} rounded-lg w-[280px] md:w-[350px] lg:w-[600px]`}
-                    style={isMobile && cardType === 3 && popupType == 1 ? { top: '20%', transform: 'translateY(-80%) translateX(40%)' } : {top: '50%', transform: 'translateY(-50%)'}} // Center popup vertically
+                    style={isMobile && cardType === 3 && popupType === 1 ? { top: '20%', transform: 'translateY(-80%) translateX(40%)' } : {top: '50%', transform: 'translateY(-50%)'}} // Center popup vertically
                 >
                     <EventPopup title={title} date={date} location={location} description={description} />
                 </div>
